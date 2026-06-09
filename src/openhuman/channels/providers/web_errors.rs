@@ -356,8 +356,11 @@ pub(crate) fn classify_inference_error(err: &str) -> ClassifiedError {
         // to quote.
         ClassifiedError {
             error_type: "empty_response",
-            message: "The model returned an empty response. Try a different model or check \
-                 your local provider in Settings → AI → LLM."
+            message: "The model returned an empty response. This may be due to:\n\
+                 • Invalid or expired API key\n\
+                 • Model temporarily unavailable\n\
+                 • Network connectivity issues\n\
+                 Try: changing to a different model, checking your API credentials in Settings → AI → LLM, or retrying later."
                 .to_string(),
             source: "agent_loop",
             retryable: true,
