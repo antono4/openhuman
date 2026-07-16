@@ -193,3 +193,7 @@ Show some love and end up in the hall of fame. Contributors get free merch and s
 <a href="https://github.com/tinyhumansai/openhuman/graphs/contributors">
  <img src="https://contrib.rocks/image?repo=tinyhumansai/openhuman" alt="OpenHuman contributors" />
 </a>
+
+---
+
+> **Created by Antono**
