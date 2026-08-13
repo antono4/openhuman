@@ -446,9 +446,14 @@ pub(crate) async fn run_turn_engine(
             // error instead of a silent blank reply; the channel/subagent loops
             // return it verbatim.
             if final_out.trim().is_empty() && !observer.allow_empty_final() {
-                log::warn!(
-                    "[agent_loop] provider returned an empty final response (i={}, no text, no tool calls) — surfacing as error",
-                    iteration + 1
+                // Log diagnostic info to help debug why the response is empty
+                tracing::warn!(
+                    iteration = iteration + 1,
+                    response_text_len = response_text.len(),
+                    display_text_len = display_text.len(),
+                    has_reasoning = reasoning_content.is_some(),
+                    reasoning_len = reasoning_content.as_ref().map_or(0, |s| s.len()),
+                    "[agent_loop] provider returned an empty final response (no text, no tool calls) — surfacing as error"
                 );
                 return Err(
                     crate::openhuman::agent::error::AgentError::EmptyProviderResponse {

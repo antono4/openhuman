@@ -52,7 +52,11 @@ fn agent_error_to_user_message(err: &AgentError) -> &'static str {
             "The agent stopped after too many tool iterations. Raise the iteration cap in Settings \u{2192} AI \u{2192} LLM or simplify the task."
         }
         AgentError::EmptyProviderResponse { .. } => {
-            "The model returned an empty response. Try a different model or check your local provider in Settings \u{2192} AI \u{2192} LLM."
+            "The model returned an empty response. This may be due to:\n\
+            • Invalid or expired API key\n\
+            • Model temporarily unavailable\n\
+            • Network connectivity issues\n\
+            Try: changing to a different model, checking your API credentials in Settings → AI → LLM, or retrying later."
         }
         AgentError::CompactionFailed { .. } => {
             "Automatic history compaction failed. The next run will start with a fresh context."
