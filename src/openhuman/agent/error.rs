@@ -93,7 +93,7 @@ impl fmt::Display for AgentError {
                 // Verbatim user-facing string from the old
                 // `agent/harness/session/turn.rs` emit site — UI / tests
                 // grep for this exact byte sequence.
-                write!(f, "The model returned an empty response. Please try again.")
+                write!(f, "The model returned an empty response. This may be due to:\n• Invalid or expired API key\n• Model temporarily unavailable\n• Network connectivity issues\nTry: changing to a different model, checking your API credentials in Settings \u{2192} AI \u{2192} LLM, or retrying later.")
             }
             Self::CompactionFailed {
                 message,
@@ -316,7 +316,7 @@ mod tests {
         let err = AgentError::EmptyProviderResponse { iteration: 1 };
         assert_eq!(
             err.to_string(),
-            "The model returned an empty response. Please try again."
+            "The model returned an empty response. This may be due to:\n• Invalid or expired API key\n• Model temporarily unavailable\n• Network connectivity issues\nTry: changing to a different model, checking your API credentials in Settings \u{2192} AI \u{2192} LLM, or retrying later."
         );
     }
 
