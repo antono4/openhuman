@@ -1,77 +1,34 @@
-<!-- README ini dihasilkan otomatis oleh workflow .github/workflows/generate-readme.yml -->
-<!-- Jangan edit manual; perubahan akan ditim pada run berikutnya. -->
+# openhuman-repo
 
-<h1 align="center">Project 👋</h1>
 
-<p align="center">
-  <strong></strong>
-</p>
 
-<p align="center">
-  <a href="https://github.com/antono4/openhuman"><img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-antono4/openhuman-blue?logo=github"></a>
-  <a href="https://antono4.github.io/openhuman/"><img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Online-success?logo=githubpages"></a>
-  <img alt="Files" src="https://img.shields.io/badge/Files-4597-informational">
-  <img alt="Updated" src="https://img.shields.io/badge/Updated-2026-09-20 21:06:23 WIB-lightgrey">
-</p>
+## 📋 Overview
 
----
+This repository contains **4597 files** and is built with the following technologies:
 
-## 📖 Tentang
+Node.js, Docker
 
-Repository **`openhuman`** adalah situs web pribadi / portofolio yang diterbitkan melalui **GitHub Pages**. Situs utama berada di [`https://antono4.github.io/openhuman/`](https://antono4.github.io/openhuman/).
-
-## 🗂️ Struktur Proyek
-
-```
-openhuman/
-├── index.html          # Halaman utama (landing / portofolio)
-├── assets/             # Aset statis (css, js, img, vendor)
-├── forms/               # Form handler (PHP)
-└── app/              # Tauri + React + Typescript  ->  https://antono4.github.io/openhuman/app/
-```
-
-## 🌐 Sub-Proyek / Demo
-
-Situs ini juga memuat beberapa sub-proyek (masing-masing punya `index.html` tersendiri):
-
-| Folder | Demo Live | Keterangan |
-|--------|-----------|-----------|
-| [`app`](./app) | [https://antono4.github.io/openhuman/app/](https://antono4.github.io/openhuman/app/) | Tauri + React + Typescript |
-
-## 🛠️ Teknologi
-
-Berdasarkan isi repository, proyek ini menggunakan:
-
-- `HTML`
-- `CSS`
-- `JavaScript`
-- `React`
-
-> Total **4597 file** terdeteksi di repository.
-
-## 🚀 Menjalankan Secara Lokal
-
-Karena ini situs statis (HTML/CSS/JS/PHP), cukup buka `index.html` di browser, atau jalankan server lokal:
+## 🚀 Quick Start
 
 ```bash
-# Tanpa dependency
-python3 -m http.server 8000
-# lalu buka http://localhost:8000
-
-# atau dengan PHP (untuk form handler di forms/)
-php -S localhost:8000
+npm install
+npm run dev
+npm run build
 ```
 
-## 📬 Kontak
+## ✨ Features
 
-- GitHub: [antono4](https://github.com/antono4)
-- Situs: [https://antono4.github.io/openhuman/](https://antono4.github.io/openhuman/)
+- 🐳 Docker support
+- 🔧 Environment config included
+- 📝 Auto-generated documentation
 
-## 📄 Lisensi
+## 🛠️ Technologies
 
-Lihat berkas [`LICENSE`](./LICENSE) untuk informasi lisensi.
+Node.js, Docker
+
+## 📄 License
+
+MIT License
 
 ---
-
-<sub>README ini di-generate otomatis pada **2026-09-20 21:06:23 WIB** oleh GitHub Actions `.github/workflows/generate-readme.yml`.</sub>
-Last updated: 2026-09-20 21:19:59 WIB
+*Last updated: 2026-09-20 23:24:22 WIB*
